@@ -195,9 +195,13 @@
     margin-top: 16px;
   }
 
+  .page-break { page-break-before: always; margin-top: 0; }
+
   @media print {
     body { background: none; }
     .container { padding: 0; max-width: none; }
+    h2, h3 { page-break-after: avoid; }
+    p { orphans: 3; widows: 3; }
   }
 </style>
 </head>
@@ -225,7 +229,7 @@
 <p>The Konektadong Pinoy Act mandates fair, reasonable, non-discriminatory (FRAND) wholesale access to carrier networks. STEP has a legal right to operate. The Philippines allows 100% foreign ownership in telecommunications. The regulatory framework exists. The demand exists. Nobody has built the product.</p>
 
 <!-- HOW IT WORKS -->
-<h2>How It Works</h2>
+<h2 class="page-break">How It Works</h2>
 
 <table>
   <thead><tr><th>Step</th><th>What the User Does</th><th>What They Get</th></tr></thead>
@@ -243,7 +247,7 @@
 <p>The STEP app has an advantage no free messaging app can match: ₱28/month covers everything. Messenger, WhatsApp, and every other messaging app need sachets — daily purchases that expire at midnight. STEP is the plan — unlimited messaging, no expiry, no daily top-ups. Sachet buyers don't choose Messenger for its features — they use it because it's what's available. STEP offers something no app can: messaging that doesn't require buying data access first. The competition isn't Messenger — it's the sachet.</p>
 
 <!-- WHAT MESSAGING COSTS TODAY -->
-<h2>What Messaging Costs Today</h2>
+<h2 class="page-break">What Messaging Costs Today</h2>
 
 <p>No carrier in the Philippines sells messaging separately. Every plan bundles data, calls, and texts together. For people who only want to message, every option either costs too much or doesn't match their spending pattern:</p>
 
@@ -261,7 +265,7 @@
 <p class="green-center">₱1/day. Less than a piece of candy.</p>
 
 <!-- WHY THIS PRICE WORKS -->
-<h2>Why This Price Works</h2>
+<h2 class="page-break">Why This Price Works</h2>
 
 <p>STEP is priced for frictionless adoption — low enough that recommending STEP to a friend requires no justification. The more users adopt, the more valuable the free app becomes, and the more subscribers join. Higher pricing slows the entire loop.</p>
 
@@ -286,9 +290,9 @@
   </tbody>
 </table>
 
-<p class="note">Voice: Opus codec at 10 kbps with 80ms frame bundling (WhatsApp uses ~20 kbps codec, ~40 kbps total with protocol overhead). Photos: learned autoencoder measured against Q80 JPEG baseline (comparable to WhatsApp photo quality). Text: character-level neural arithmetic coder, 1.5–2x compression measured on Taglish chat messages. Text is ~1.5% of data volume. Sizes are per-message averages for typical usage.</p>
+<p class="note">Voice: Opus at 10 kbps (WhatsApp uses ~40 kbps with overhead). Photos: learned autoencoder vs Q80 JPEG baseline. Text: neural arithmetic coder, ~1.5% of data volume. Sizes are per-message averages for typical usage.</p>
 
-<p>The result: each subscriber uses approximately <strong>75 MB/month</strong> of messaging data. At wholesale rates (the per-GB fee STEP pays the host carrier for network access), that costs <strong>$0.015/subscriber/month.</strong> Revenue per subscriber is $0.50. That is a <strong>94% gross margin.</strong></p>
+<p>Each subscriber uses approximately <strong>75 MB/month</strong>. At wholesale rates, that costs <strong>$0.015/subscriber/month.</strong> Revenue is $0.50. That is a <strong>94% gross margin.</strong></p>
 
 <table>
   <thead><tr><th>Line Item</th><th>Per Subscriber / Month</th></tr></thead>
@@ -300,12 +304,10 @@
   </tbody>
 </table>
 
-<p>After SIM provisioning, platform costs, payment processing, and distribution, <strong>contribution margin is ~$0.35/subscriber/month (70%).</strong> At scale, net margins reach <strong>55–74%</strong> depending on tax incentives — comparable to the best software companies.</p>
-
-<p>The technology is not the product — it is what makes the product profitable at ₱28. Without compression, unlimited messaging at this price point is a money-losing proposition.</p>
+<p>After SIM provisioning, platform costs, payment processing, and distribution, <strong>contribution margin is ~$0.35/subscriber/month (70%).</strong> At scale, net margins reach <strong>55–74%</strong> depending on tax incentives. The technology is not the product — it is what makes the product profitable at ₱28. Without compression, unlimited messaging at this price point is a money-losing proposition.</p>
 
 <!-- THE MARKET -->
-<h2>The Market</h2>
+<h2 class="page-break">The Market</h2>
 
 <p>The Philippines has 112.7 million people (2024 census) and approximately 82–85 million unique mobile subscribers (GSMA 2024). Of these, ~95% are prepaid. Carrier ARPU data confirms that the majority of prepaid users buy daily sachets rather than monthly plans — Globe's prepaid ARPU of ~₱121–138/month is consistent with purchasing ₱10–20 sachets several times a week, not ₱599+ monthly plans. The addressable market is <strong>~35–45 million</strong> prepaid users who are already spending on messaging access through sachets but have no monthly plan. An additional 10–15 million feature phone users are transitioning to smartphones over the next 3–5 years.</p>
 
@@ -325,7 +327,7 @@
 <p class="note">Revenue = subscribers × $6.00/year. No data revenue. Free app users generate $0 — they build the network that drives subscriptions. Market sizing derived from GSMA Mobile Economy Asia Pacific 2024 (unique subscribers), Globe/PLDT annual reports (prepaid ARPU consistent with sachet buying), and Nielsen/TaasNooPilipino surveys (71% of Filipino adults practice daily budgeting).</p>
 
 <!-- WHY CARRIERS CAN'T COMPETE -->
-<h2>Why Carriers Can't Compete</h2>
+<h2 class="page-break">Why Carriers Can't Compete</h2>
 
 <p>The obvious question: can't the big carriers just launch their own ₱28 messaging plan? They can't respond effectively for structural reasons:</p>
 
@@ -339,7 +341,7 @@
 <p class="note">See full concept document for detailed carrier dynamics, wholesale negotiation strategy, and DITO partnership analysis.</p>
 
 <!-- FINANCIAL SUMMARY -->
-<h2>Financial Summary</h2>
+<h2 class="page-break">Financial Summary</h2>
 
 <p><strong>Break-even at ~150K subscribers</strong> — less than 0.4% of the 35–45M addressable market. Achievable by the end of Year 1. At 50% of projected growth, the business is still profitable from Year 2. At any wholesale rate up to $2.00/GB (the worst in the Philippine market), margins remain above 34%. The floor is a profitable niche business.</p>
 
@@ -357,18 +359,18 @@
   </tbody>
 </table>
 
-<p class="note">Conservative: 25% standard corporate income tax. With incentives: 0% CIT under CREATE MORE Act Tier III income tax holiday (6–7 years). Year 1 loss of $600K covered by seed funding. Service launches Q3 Year 1. For context, DITO reached 5M subscribers in 9 months at ₱99 (~556K/month). STEP projects 200K in 6 months (~33K/month) — 17x slower growth, at 3.5x lower price. Subscriber figures are net of ~1–2% monthly churn. At ₱28/month, the cost of staying subscribed is lower than the friction of canceling, and there is no cheaper alternative to switch to.</p>
+<p class="note">Conservative: 25% standard corporate income tax. With incentives: 0% CIT under CREATE MORE Act Tier III income tax holiday (6–7 years). Year 1 loss of $600K covered by seed funding. Service launches Q3 Year 1. For context, DITO reached 5M subscribers in 9 months at ₱99 (~556K/month). STEP projects 200K in 6 months (~33K/month) — 17x slower growth, at 3.5x lower price. Subscriber figures are net of ~1–2% monthly churn.</p>
 
-<p><strong>Key margin drivers:</strong> Wholesale messaging costs are 3.4% of gross revenue at Year 6 ($4.3M on $126M). Distribution via 1–2 master distributors (~10% channel margin on in-store purchases) — STEP does not manage individual stores. Digital payments and eSIM (electronic SIM, no physical card needed) activations bypass distribution costs entirely.</p>
+<p><strong>Key margin drivers:</strong> Wholesale messaging costs are 3.4% of gross revenue at Year 6 ($4.3M on $126M). Distribution via 1–2 master distributors (~10% channel margin on in-store purchases). Digital payments and eSIM activations bypass distribution costs entirely.</p>
 
 <p><strong>Wholesale resilience:</strong> Even at $2.00/GB — the worst rate in the Philippine market — Year 6 net profit is $43–58M at 34–46% margins. Compression makes per-subscriber data small enough (~75 MB/month) that wholesale pricing cannot break the model.</p>
 
-<p><strong>Payment collection:</strong> ₱28/month is purchased the same way as a sachet — walk into a sari-sari store or convenience chain, pay cash, and get 30 days. No bank account, no autopay, no subscription. Same purchase behavior, same stores, same cash transaction — but it lasts all month instead of expiring at midnight. GCash (60M+ registered users in PH) and digital reload are also supported for users who prefer them.</p>
+<p><strong>Payment collection:</strong> ₱28/month is purchased the same way as a sachet — cash at any sari-sari store or convenience chain. No bank account, no autopay. GCash (60M+ registered users in PH) and digital reload also supported.</p>
 
-<p><strong>Cash position:</strong> $800K seed minus ~$600K Year 1 net loss = $200K ending cash. Subscription revenue crosses monthly costs in Q1 Year 2, at which point the company is cash-flow positive. Year 3+ growth funded entirely by operating profits.</p>
+<p><strong>Cash position:</strong> $800K seed minus ~$600K Year 1 net loss = $200K ending cash. Revenue crosses monthly costs in Q1 Year 2. Year 3+ growth funded entirely by operating profits.</p>
 
 <!-- THE DEAL -->
-<h2>The Deal</h2>
+<h2 class="page-break">The Deal</h2>
 
 <p><strong>$800K for 10% Class A shares.</strong> Single equity round. Shares are in a Singapore holding company that owns 100% of the Philippine operating subsidiary. Singapore provides a neutral, investor-friendly legal jurisdiction with strong corporate governance, no capital gains tax on share disposals, and an extensive tax treaty network.</p>
 
@@ -381,7 +383,7 @@
 </ul>
 
 <!-- INVESTOR RETURNS -->
-<h3>Investor Returns</h3>
+<h3 class="page-break">Investor Returns</h3>
 
 <p><strong>Conservative (25% CIT, no tax incentives):</strong></p>
 
@@ -422,7 +424,7 @@
 <p class="note">Withholding = investor dividend × (15/85). At Year 6: $1.2–1.6M, representing ~1% of gross revenue. Company cost not deducted from investor returns — investor receives full dividend amount.</p>
 
 <!-- BUYBACK SCENARIOS -->
-<h3>Buyback Scenarios</h3>
+<h3 class="page-break">Buyback Scenarios</h3>
 
 <table>
   <thead><tr><th>Exercised At</th><th>Total Return (Cons.)</th><th>Total Return (Incent.)</th><th>Multiple (Cons.)</th><th>Multiple (Incent.)</th></tr></thead>
@@ -439,12 +441,12 @@
 <p>This is not a typical venture investment. There is no exit dependency, no IPO required, no Series A to negotiate. The investor receives mandatory cash dividends every year and holds a stake in a high-margin, cash-generating business. At Year 4 buyback, the investor walks away with <strong>$16–17.4M on $800K in 4 years (20–22x).</strong></p>
 
 <!-- USE OF FUNDS -->
-<h2>Use of Funds</h2>
+<h2 class="page-break">Use of Funds</h2>
 
 <table>
   <thead><tr><th>Category</th><th>Amount</th><th>Notes</th></tr></thead>
   <tbody>
-    <tr><td>Corporate setup (SG + PH)</td><td>$50K</td><td>Kindrik Partners (SG incorporation services), PH entity</td></tr>
+    <tr><td>Corporate setup (SG + PH)</td><td>$10K</td><td>Kindrik Partners (legal review), PH entity registration</td></tr>
     <tr><td>COO (12 months)</td><td>$60K</td><td>PH telecom insider — MVNO ops, wholesale, distribution</td></tr>
     <tr><td>CTO (12 months)</td><td>$60K</td><td>PH-based, leads engineering team</td></tr>
     <tr><td>Founder salary + travel</td><td>$40K</td><td>Relocating to Manila to start operations</td></tr>
@@ -457,7 +459,7 @@
     <tr><td>Accounting + audit</td><td>$12K</td><td>Outsourced bookkeeping + annual audit (PH firm)</td></tr>
     <tr><td>Executive assistant</td><td>$7K</td><td>PH-based, scheduling/admin/investor reporting</td></tr>
     <tr><td>UI/UX design (contract)</td><td>$10K</td><td>PH-based, 4–6 months during app development</td></tr>
-    <tr><td class="bold">Contingency</td><td class="bold">$145.5K</td><td class="bold">~3.7 months runway buffer at $39K/month burn</td></tr>
+    <tr><td class="bold">Contingency</td><td class="bold">$185.5K</td><td class="bold">~4.8 months runway buffer at $39K/month burn</td></tr>
     <tr><td class="bold">Total</td><td class="bold">$800K</td><td></td></tr>
   </tbody>
 </table>
@@ -467,7 +469,7 @@
 <p class="note">COO receives 1.5% profit share on net profit (not in P&L).</p>
 
 <!-- TEAM & ROADMAP -->
-<h2>Team &amp; Roadmap</h2>
+<h2 class="page-break">Team &amp; Roadmap</h2>
 
 <p><strong>Founder:</strong> Solo-built the entire compression stack — ternary-weight transformer, image autoencoder, voice codec integration, integer-only inference, ARM NEON optimization. The technology is working on Android today. Relocating to Manila to start operations. $36K/year salary. The founder's background is engineering, not telecom — the COO and CTO are the first two hires specifically because they fill the operational and market gaps.</p>
 
@@ -486,7 +488,7 @@
 </table>
 
 <!-- KEY RISKS -->
-<h2>Key Risks</h2>
+<h2 class="page-break">Key Risks</h2>
 
 <table>
   <thead><tr><th>Risk</th><th>Mitigation</th></tr></thead>
