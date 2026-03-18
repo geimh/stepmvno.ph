@@ -35,7 +35,7 @@
 
   @media (max-width: 600px) {
     .container { padding: 32px 20px; }
-    .table-wrap { box-shadow: inset -14px 0 10px -10px rgba(0,0,0,0.12); }
+    .table-wrap.has-scroll { box-shadow: inset -18px 0 12px -12px rgba(0,0,0,0.22); }
   }
 
   /* Title page */
@@ -527,5 +527,17 @@
 </div>
 
 </div>
+<script>
+(function(){
+  function update(){
+    document.querySelectorAll('.table-wrap').forEach(function(el){
+      el.classList.toggle('has-scroll', el.scrollWidth - el.clientWidth > 1 && el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
+    });
+  }
+  document.querySelectorAll('.table-wrap').forEach(function(el){ el.addEventListener('scroll', update); });
+  window.addEventListener('resize', update);
+  update();
+})();
+</script>
 </body>
 </html>
