@@ -9,8 +9,14 @@
 <meta property="og:description" content="Messaging-only MVNO for the Philippines. Unlimited messaging for ₱28/month ($0.50). Seed round: $800K for 10% Class A with mandatory annual dividends.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://stepmvno.ph">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="STEP — Investor Memo">
+<meta name="twitter:description" content="Messaging-only MVNO for the Philippines. Unlimited messaging for ₱28/month ($0.50). Seed round: $800K for 10% Class A with mandatory annual dividends.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/inter-700.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   @font-face { font-family: 'Inter'; font-style: normal; font-weight: 300; font-display: swap; src: url('/fonts/inter-300.woff2') format('woff2'); }
   @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/inter-400.woff2') format('woff2'); }
@@ -534,6 +540,7 @@
 </div>
 <script>
 (function(){
+  if(!window.matchMedia('(max-width: 600px)').matches) return;
   document.querySelectorAll('.table-wrap').forEach(function(el){
     var track = document.createElement('div');
     track.className = 'scroll-track';
